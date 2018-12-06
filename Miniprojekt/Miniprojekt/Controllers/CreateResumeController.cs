@@ -8,15 +8,13 @@ namespace Miniprojekt.Controllers
 {
     public class CreateResumeController : Controller
     {
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
+       
         [Route("")]
         [Route("Create/Resume")]
+        [HttpGet]
         public IActionResult CreateResume()
         {
-            return Content("tja");
+            return View();
         }
     }
 }
