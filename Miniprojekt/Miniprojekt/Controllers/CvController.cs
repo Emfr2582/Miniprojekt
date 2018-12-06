@@ -9,8 +9,8 @@ namespace Miniprojekt.Controllers
     public class CvController
     {
 
-        [HttpGet]
-        public IActionResult Create()
+        
+        public IActionResult Index()
         {
             return View();
         }
