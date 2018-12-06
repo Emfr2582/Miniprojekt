@@ -9,11 +9,7 @@ namespace Miniprojekt.Controllers
     public class CvController
     {
 
-        
-        public IActionResult Index()
-        {
-            return View();
-        }
+     
 
     }
 }
