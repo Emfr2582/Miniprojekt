@@ -18,6 +18,7 @@ namespace Miniprojekt.Models.ViewModels
         public string Address { get; set; }
 
         [Required()]
+        [Display(Name ="Telefonnummer")]
         public string PhoneNumber { get; set; }
 
         [Required()]
