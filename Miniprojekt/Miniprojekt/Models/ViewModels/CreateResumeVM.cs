@@ -8,6 +8,8 @@ namespace Miniprojekt.Models.ViewModels
 {
     public class CreateResumeVM
     {
+        public int Id { get; set; }
+
         [Required()]
         public string Name { get; set; }
 

@@ -22,6 +22,9 @@ namespace Miniprojekt.Controllers
         [HttpPost]
         public IActionResult CreateResume(CreateResumeVM model)
         {
+            if (!ModelState.IsValid)
+                return View("CreateResume", model);
+            
             return Content("hej");
         }
     }
