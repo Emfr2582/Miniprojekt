@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Miniprojekt.Models.ViewModels;
 
 namespace Miniprojekt.Controllers
 {
@@ -15,6 +16,13 @@ namespace Miniprojekt.Controllers
         public IActionResult CreateResume()
         {
             return View();
+        }
+
+        [Route("input/Createresume")]
+        [HttpPost]
+        public IActionResult CreateResume(CreateResumeVM model)
+        {
+            return Content("hej");
         }
     }
 }
