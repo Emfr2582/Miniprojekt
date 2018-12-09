@@ -18,7 +18,8 @@ namespace Miniprojekt.Services
 
         public void AddInfo(CreateResumeVM info)
         {
-            info.Id = info.Count == 0 ? 1 : people.Max(p => p.Id) + 1;
+            info.Id = contactInfo.Count == 0 ? 1 : contactInfo.Max(c => c.Id) + 1;
+            contactInfo.Add(info);
         }
 
         public List<CreateResumeVM> GetInfo()
