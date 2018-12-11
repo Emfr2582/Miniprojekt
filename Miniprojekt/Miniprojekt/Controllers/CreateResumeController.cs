@@ -8,7 +8,6 @@ using Miniprojekt.Services;
 
 namespace Miniprojekt.Controllers
 {
-
     public class CreateResumeController : Controller
     {
         private IResumeService _resumeService;
@@ -34,7 +33,14 @@ namespace Miniprojekt.Controllers
                 return View("CreateResume", model);
             else
                 _resumeService.AddInfo(model);
-            return View(model);
+
+            return RedirectToAction(nameof(Details));
+        }
+
+        public IActionResult Details()
+        {
+            var viewModel = _resumeService.GetInfo().Last();
+            return View(viewModel);
         }
     }
 }

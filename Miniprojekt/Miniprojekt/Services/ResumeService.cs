@@ -19,7 +19,7 @@ namespace Miniprojekt.Services
 
         }
 
-        private List<CreateResumeVM> contactInfo = new List<CreateResumeVM>();
+        public List<CreateResumeVM> contactInfo = new List<CreateResumeVM>();
 
         public void AddInfo(CreateResumeVM info)
         {
@@ -29,7 +29,7 @@ namespace Miniprojekt.Services
 
         public List<CreateResumeVM> GetInfo()
         {
-            return null;
+            return contactInfo;
         }
     }
 }

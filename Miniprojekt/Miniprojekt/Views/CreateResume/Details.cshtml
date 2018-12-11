@@ -1,5 +1,6 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @using Miniprojekt.Models.ViewModels
+@using Miniprojekt.Services
 @model CreateResumeVM
 
 
@@ -7,18 +8,14 @@
 <h2> Översikt av ditt CV</h2>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 
-<li>
-    @Model.Name
-    <br />
-    @Model.LastName
-    <br />
-    @Model.Address
-    <br />
-    @Model.PhoneNumber
-    <br />
-    @Model.Email
-    <br>
-</li>
+<ol>
+   <li>@Model.Name <li/>
+   <li>@Model.LastName</li>
+   <li> @Model.Address</li>
+   <li>@Model.PhoneNumber
+   <li>@Model.Email</li>
+    </ol>
+
 @section scripts {
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
