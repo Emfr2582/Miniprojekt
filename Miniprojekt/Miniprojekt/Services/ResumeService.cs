@@ -14,6 +14,11 @@ namespace Miniprojekt.Services
 
     public class ResumeService : IResumeService
     {
+        public ResumeService()
+        {
+
+        }
+
         private List<CreateResumeVM> contactInfo = new List<CreateResumeVM>();
 
         public void AddInfo(CreateResumeVM info)
@@ -24,7 +29,7 @@ namespace Miniprojekt.Services
 
         public List<CreateResumeVM> GetInfo()
         {
-            throw new NotImplementedException();
+            return null; 
         }
     }
 }
