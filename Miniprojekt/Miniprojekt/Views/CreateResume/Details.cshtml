@@ -8,16 +8,12 @@
 <h2> Översikt av ditt CV</h2>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.css">
 
-<ol>
+<ul>
    <li>@Model.Name </li>
    <li>@Model.LastName</li>
    <li>@Model.Address</li>
    <li>@Model.PhoneNumber</li>
    <li>@Model.Email</li>
-    </ol>
+   <li>@Model.EducationItems[Model.SelectedEducationValue].Text</li>
+    </ul>
 
-@section scripts {
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
-}

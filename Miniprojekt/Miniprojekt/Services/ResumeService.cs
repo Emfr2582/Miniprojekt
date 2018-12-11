@@ -1,4 +1,5 @@
-﻿using Miniprojekt.Models.ViewModels;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Miniprojekt.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace Miniprojekt.Services
     {
         void AddInfo(CreateResumeVM info);
         List<CreateResumeVM> GetInfo();
+        SelectListItem[] EducationInfo();
     }
 
     public class ResumeService : IResumeService
@@ -30,6 +32,17 @@ namespace Miniprojekt.Services
         public List<CreateResumeVM> GetInfo()
         {
             return contactInfo;
+        }
+
+        public SelectListItem[] EducationInfo()
+        {
+            return new SelectListItem[]
+            {
+                new SelectListItem {Value = "1", Text = "Grundskola", Selected = true},
+                new SelectListItem {Value = "2", Text = "Gymnasium"},
+                new SelectListItem {Value = "3", Text = "Folkhögskola/YH-utbildning"},
+                new SelectListItem {Value = "4", Text = "Högskola/Univeristet"},
+            };
         }
     }
 }

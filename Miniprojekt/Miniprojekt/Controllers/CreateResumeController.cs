@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Miniprojekt.Models.ViewModels;
 using Miniprojekt.Services;
 
@@ -22,7 +23,12 @@ namespace Miniprojekt.Controllers
         [HttpGet]
         public IActionResult CreateResume()
         {
-            return View();
+            var viewModel = new CreateResumeVM
+            {
+                EducationItems = _resumeService.EducationInfo()
+            };
+
+            return View(viewModel);
         }
 
         [Route("input/Createresume")]
@@ -30,7 +36,10 @@ namespace Miniprojekt.Controllers
         public IActionResult CreateResume(CreateResumeVM model)
         {
             if (!ModelState.IsValid)
+            {
+                model.EducationItems = _resumeService.EducationInfo();
                 return View("CreateResume", model);
+            }
             else
                 _resumeService.AddInfo(model);
 
@@ -40,6 +49,7 @@ namespace Miniprojekt.Controllers
         public IActionResult Details()
         {
             var viewModel = _resumeService.GetInfo().Last();
+            viewModel.EducationItems = _resumeService.EducationInfo();
             return View(viewModel);
         }
     }

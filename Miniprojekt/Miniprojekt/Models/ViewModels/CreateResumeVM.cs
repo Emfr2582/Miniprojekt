@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,7 +9,6 @@ namespace Miniprojekt.Models.ViewModels
 {
     public class CreateResumeVM
     {
-        
         public int Id { get; set; }
 
         [Required()]
@@ -29,5 +29,11 @@ namespace Miniprojekt.Models.ViewModels
         [EmailAddress(ErrorMessage ="Invalid e-mail adress")]
         public string Email { get; set; }
 
+        [Display(Name ="Education")]
+        public SelectListItem[] EducationItems { get; set; }
+
+        //[Required]
+        [Range(1,4)]
+        public int SelectedEducationValue { get; set; }
     }
 }

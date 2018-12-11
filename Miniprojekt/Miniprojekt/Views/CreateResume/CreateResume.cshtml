@@ -5,7 +5,6 @@
 
 <title> Skapa ditt CV </title>
 <h2>Skapa ditt CV</h2>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.css">
 
 <form asp-controller="input" asp-action="createResume">
     <label asp-for="Name"></label>
@@ -27,7 +26,12 @@
     <label asp-for="Email"></label>
     <input asp-for="Email" />
     <span asp-validation-for="Email"></span>
-    <br/>
+
+    <label asp-for="EducationItems"></label>
+    <select asp-for="SelectedEducationValue"
+            asp-items="Model.EducationItems"></select>
+    <span asp-validation-for="SelectedEducationValue"></span>
+    <br />
     <input type="submit" value="submit" />
 </form>
 @section scripts {
