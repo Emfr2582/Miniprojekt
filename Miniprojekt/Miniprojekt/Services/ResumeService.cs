@@ -29,7 +29,7 @@ namespace Miniprojekt.Services
 
         public List<CreateResumeVM> GetInfo()
         {
-            return null; 
+            return null;
         }
     }
 }
