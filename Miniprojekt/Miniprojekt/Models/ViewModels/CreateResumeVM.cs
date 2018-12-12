@@ -33,6 +33,6 @@ namespace Miniprojekt.Models.ViewModels
         public SelectListItem[] EducationItems { get; set; }
 
         //[Required]
-        public int[] SelectedEducationValue { get; set; }
+        public string[] SelectedEducationValue { get; set; }
     }
 }
