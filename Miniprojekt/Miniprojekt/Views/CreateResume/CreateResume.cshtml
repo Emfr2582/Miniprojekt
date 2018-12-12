@@ -30,8 +30,10 @@
 
     <label asp-for="EducationItems"></label>
     <text> Lägg till alla avslutade utbildningar</text>
-    <br/>
-    <select asp-for="SelectedEducationValue"
+    <br />
+    <input type="hidden" name="SelectedEducationValue" value="SelectedEducationValue"/>
+
+    <select id="edu"
             asp-items="Model.EducationItems"></select>
     <span asp-validation-for="SelectedEducationValue"></span>
     <br />
@@ -41,5 +43,14 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        $(function () {
+            $("#edu").change(function () {
+                console.log(this.options[this.selectedIndex].text);
+                var newInput = $('input').this.val(HTMLSelectElement.name.selectedIndex);
+        });
+
+        })
+    </script>
 }
 

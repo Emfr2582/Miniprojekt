@@ -20,6 +20,10 @@
     <text> E-mail adress:</text>
    <li>@Model.Email</li>
     <text>Högsta avslutade utbildning</text>
-   <li>@Model.EducationItems[Model.SelectedEducationValue].Text</li>
+   @foreach (var item in Model.SelectedEducationValue)
+   {
+       <li>@item </li>
+   }
+   
     </ul>
 
