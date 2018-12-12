@@ -7,6 +7,7 @@
 <h2>Skapa ditt CV</h2>
 
 <form asp-controller="input" asp-action="createResume">
+    <text>Vänligen mata in dina kontaktuppgifter i textfälten nedan </text>
     <label asp-for="Name"></label>
     <input asp-for="Name" />
     <span asp-validation-for="Name"></span>
@@ -28,6 +29,8 @@
     <span asp-validation-for="Email"></span>
 
     <label asp-for="EducationItems"></label>
+    <text> Lägg till alla avslutade utbildningar</text>
+    <br/>
     <select asp-for="SelectedEducationValue"
             asp-items="Model.EducationItems"></select>
     <span asp-validation-for="SelectedEducationValue"></span>

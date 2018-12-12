@@ -9,11 +9,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.css">
 
 <ul>
+    <text>Förnamn:</text>
    <li>@Model.Name </li>
+    <text>Efternamn:</text>
    <li>@Model.LastName</li>
+    <text>Bostadsadress:</text>
    <li>@Model.Address</li>
+    <text>Telefonnummer:</text>
    <li>@Model.PhoneNumber</li>
+    <text> E-mail adress:</text>
    <li>@Model.Email</li>
+    <text>Högsta avslutade utbildning</text>
    <li>@Model.EducationItems[Model.SelectedEducationValue].Text</li>
     </ul>
 

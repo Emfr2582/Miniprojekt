@@ -29,7 +29,7 @@ namespace Miniprojekt.Models.ViewModels
         [EmailAddress(ErrorMessage ="Invalid e-mail adress")]
         public string Email { get; set; }
 
-        [Display(Name ="Education")]
+        [Display(Name ="Utbildningar")]
         public SelectListItem[] EducationItems { get; set; }
 
         //[Required]
