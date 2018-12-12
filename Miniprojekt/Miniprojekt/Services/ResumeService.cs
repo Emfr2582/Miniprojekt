@@ -38,7 +38,8 @@ namespace Miniprojekt.Services
         {
             return new SelectListItem[]
             {
-                new SelectListItem {Value = "1", Text = "Grundskola", Selected = true},
+                new SelectListItem {Value = "0", Text= "Välj"},
+                new SelectListItem {Value = "1", Text = "Grundskola"},
                 new SelectListItem {Value = "2", Text = "Gymnasium"},
                 new SelectListItem {Value = "3", Text = "Folkhögskola/YH-utbildning"},
                 new SelectListItem {Value = "4", Text = "Högskola/Univeristet"},

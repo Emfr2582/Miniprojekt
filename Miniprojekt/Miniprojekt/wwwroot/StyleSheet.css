@@ -2,18 +2,30 @@
 body{
     background-color: #ffffb3;
     font-family: 'Libre Franklin', sans-serif;
+    color: black;
+}
+
+img{
+    width: 20px;
+}
+
+input{
+    font-size: 15px;
+}
+
+text{
+    font-size: 10px;
+    color: black; 
 }
 
 form{
-
- 
-}
-
-div {
     flex-direction: row;
     display: inline;
     display: inline-block;
     display: block;
     display: run-in;
     flex-wrap: wrap
+}
+
+div {
 }

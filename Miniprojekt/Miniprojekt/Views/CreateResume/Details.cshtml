@@ -3,12 +3,9 @@
 @using Miniprojekt.Services
 @model CreateResumeVM
 
-
 <title>Översikt</title>
 <h2> Översikt av ditt CV</h2>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.css">
 
-<ul>
     <text>Förnamn:</text>
    <li>@Model.Name </li>
     <text>Efternamn:</text>
@@ -19,11 +16,9 @@
    <li>@Model.PhoneNumber</li>
     <text> E-mail adress:</text>
    <li>@Model.Email</li>
-    <text>Högsta avslutade utbildning</text>
+    <label>Högsta avslutade utbildning</label>
    @foreach (var item in Model.SelectedEducationValue)
    {
        <li>@item </li>
    }
    
-    </ul>
-
