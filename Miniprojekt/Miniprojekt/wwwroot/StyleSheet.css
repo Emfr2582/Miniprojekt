@@ -1,5 +1,8 @@
-﻿
+﻿h2{
+    text-align:center;
+}
 body{
+    text-align: center;
     background-color: #ffffb3;
     font-family: 'Libre Franklin', sans-serif;
     color: black;
@@ -17,15 +20,6 @@ text{
     font-size: 10px;
     color: black; 
 }
-
-form{
-    flex-direction: row;
-    display: inline;
-    display: inline-block;
-    display: block;
-    display: run-in;
-    flex-wrap: wrap
-}
-
-div {
+div{
+    font-size: 15px;
 }
