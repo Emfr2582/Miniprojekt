@@ -1,0 +1,18 @@
+﻿
+body{
+    background-color: #ffffb3;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+form{
+ 
+}
+
+div {
+    flex-direction: row;
+    display: inline;
+    display: inline-block;
+    display: block;
+    display: run-in;
+    flex-wrap: wrap
+}

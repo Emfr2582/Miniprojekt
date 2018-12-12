@@ -2,7 +2,6 @@
 @using Miniprojekt.Models.ViewModels
 @model CreateResumeVM
 
-
 <title> Skapa ditt CV </title>
 <h2>Skapa ditt CV</h2>
 
@@ -36,7 +35,8 @@
     <select id="edu"
             asp-items="Model.EducationItems"></select>
     <br />
-    <label id="selectedNames"></label>
+    <label>Valda utbildningar</label>
+    <span id="selectedNames"></span>
     <input type="submit" value="submit" />
 </form>
 @section scripts {

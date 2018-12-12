@@ -29,6 +29,7 @@ namespace Miniprojekt
             }
 
             app.UseMvcWithDefaultRoute();
+            app.UseStaticFiles();
         }
     }
 }
