@@ -34,6 +34,16 @@
     <input asp-for="Email" />
     <span asp-validation-for="Email"></span>
     <br/>
+    @foreach (var item in Model.Gender)
+    {
+        <input type="checkbox"
+               name="@nameof(CreateResumeVM.SelectedGenderValues)"
+               value="@item.Value"
+               id="Gender_@item.Value" />
+               <label for="Gender_@item.Value">@item.Text</label>
+               <br/>
+    }
+
     <text> Lägg till alla dina avslutade utbildningar nedan</text>
     <br/>
     <label asp-for="EducationItems">Utbildningar</label>
