@@ -36,6 +36,7 @@ namespace Miniprojekt.Models.ViewModels
 
         [Display(Name = "Gender")]
         public SelectListItem[] Gender { get; set; }
-        public int[] SelectedGenderValues{ get; set; }
+        public bool[] SelectedGenderValues{ get; set; }
+
     }
 }

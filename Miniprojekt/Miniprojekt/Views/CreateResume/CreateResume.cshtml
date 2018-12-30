@@ -47,11 +47,12 @@
             <input type="checkbox"
                    name="@nameof(CreateResumeVM.SelectedGenderValues)"
                    value="@item.Value"
-                   id="Gender_@item.Value" />
+                   id="Gender_@item.Value"/>
             <label for="Gender_@item.Value">@item.Text</label>
             </div>
         }
     </div>
+    <span id="selectedGender"></span>
     <text> Lägg till alla dina avslutade utbildningar nedan</text>
     <br />
     <label asp-for="EducationItems">Utbildningar</label>
@@ -82,6 +83,14 @@
                 $("form").append(newInput);
 
                 $("#selectedNames").append($("<div>" + this.options[this.selectedIndex].text + "</div>"))
+            });
+            var limit = 1;
+            $("input[type=checkbox]").on('change', function (e) {
+                console.log($(this).siblings(":checked").length);
+                if ($(this).siblings().filter(":checked").length >= limit) {
+                    console.log("bajs");
+                 this.checked = false;
+             }
             });
 
         })
