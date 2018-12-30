@@ -15,14 +15,16 @@
 <p>@Model.PhoneNumber</p>
 <text> E-mail adress:</text>
 <p>@Model.Email</p>
-<text> Kön:</text>
-@foreach (var item in Model.SelectedGenderValues)
-{
-    <p>@item</p>
-}
-<text>Högsta avslutade utbildning</text>
-@foreach (var item in Model.SelectedEducationValue)
-{
-    <p>@item </p>
-}
+<div class="gender-container">
+    <text> Kön:</text>
+    @foreach (var item in Model.SelectedGenderValues)
+    {
+        <p>@item</p>
+    }
+    </div>
+    <text>Högsta avslutade utbildning</text>
+    @foreach (var item in Model.SelectedEducationValue)
+    {
+        <p>@item </p>
+    }
 

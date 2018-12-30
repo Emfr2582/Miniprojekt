@@ -23,3 +23,21 @@ text{
 div{
     font-size: 15px;
 }
+.gender-container {
+    vertical-align: middle;
+    align-content: center;
+    text-justify: inter-word;
+    flex-direction: column;
+    outline-style: solid;
+    outline-color: black;
+    outline-width: medium;
+    box-sizing: border-box;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.gender-item {
+    text-align: left;
+    margin: 0 32%;
+}
