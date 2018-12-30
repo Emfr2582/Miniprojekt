@@ -36,13 +36,6 @@ namespace Miniprojekt.Models.ViewModels
 
         [Display(Name = "Gender")]
         public SelectListItem[] Gender { get; set; }
-            public SelectListItem[] Gender = new SelectListItem[]
-            {
-                new SelectListItem { Value = "1", Text = "Kvinna"},
-                new SelectListItem {Value = "2", Text = "Man"},
-                new SelectListItem {Value = "3", Text = "Annat"},
-                new SelectListItem {Value = "4", Text = "Vill ej uppge"}
-            };
         public int[] SelectedGenderValues{ get; set; }
     }
 }

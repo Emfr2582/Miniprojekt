@@ -5,19 +5,24 @@
 
 <title>Översikt</title>
 
-    <text>Förnamn:</text>
-   <p>@Model.Name </p>
-    <text>Efternamn:</text>
-   <p>@Model.LastName</p>
-    <text>Bostadsadress:</text>
-   <p>@Model.Address</p>
-    <text>Telefonnummer:</text>
-   <p>@Model.PhoneNumber</p>
-    <text> E-mail adress:</text>
-   <p>@Model.Email</p>
-    <text>Högsta avslutade utbildning</text>
-   @foreach (var item in Model.SelectedEducationValue)
-   {
-       <p>@item </p>
-   }
-   
+<text>Förnamn:</text>
+<p>@Model.Name </p>
+<text>Efternamn:</text>
+<p>@Model.LastName</p>
+<text>Bostadsadress:</text>
+<p>@Model.Address</p>
+<text>Telefonnummer:</text>
+<p>@Model.PhoneNumber</p>
+<text> E-mail adress:</text>
+<p>@Model.Email</p>
+<text> Kön:</text>
+@foreach (var item in Model.SelectedGenderValues)
+{
+    <p>@item</p>
+}
+<text>Högsta avslutade utbildning</text>
+@foreach (var item in Model.SelectedEducationValue)
+{
+    <p>@item </p>
+}
+

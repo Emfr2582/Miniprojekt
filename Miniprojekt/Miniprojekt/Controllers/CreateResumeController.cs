@@ -25,32 +25,39 @@ namespace Miniprojekt.Controllers
         {
             var viewModel = new CreateResumeVM
             {
-                EducationItems = _resumeService.EducationInfo()
-            };
-
-            return View(viewModel);
-        }
-
-        [Route("input/Createresume")]
-        [HttpPost]
-        public IActionResult CreateResume(CreateResumeVM model)
-        {
-            if (!ModelState.IsValid)
+                EducationItems = _resumeService.EducationInfo(),
+                Gender = new SelectListItem[]
             {
-                model.EducationItems = _resumeService.EducationInfo();
-                return View("CreateResume", model);
+                new SelectListItem {Value = "1", Text = "Kvinna"},
+                new SelectListItem {Value = "2", Text = "Man"},
+                new SelectListItem {Value = "3", Text = "Annat"},
+                new SelectListItem {Value = "4", Text = "Vill ej uppge"}
             }
-            else
-                _resumeService.AddInfo(model);
+        };
 
-            return RedirectToAction(nameof(Details));
-        }
-
-        public IActionResult Details()
-        {
-            var viewModel = _resumeService.GetInfo().Last();
-            viewModel.EducationItems = _resumeService.EducationInfo();
             return View(viewModel);
-        }
     }
+
+    [Route("input/Createresume")]
+    [HttpPost]
+    public IActionResult CreateResume(CreateResumeVM model)
+    {
+        if (!ModelState.IsValid)
+        {
+            model.EducationItems = _resumeService.EducationInfo();
+            return View("CreateResume", model);
+        }
+        else
+            _resumeService.AddInfo(model);
+
+        return RedirectToAction(nameof(Details));
+    }
+
+    public IActionResult Details()
+    {
+        var viewModel = _resumeService.GetInfo().Last();
+        viewModel.EducationItems = _resumeService.EducationInfo();
+        return View(viewModel);
+    }
+}
 }
